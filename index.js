@@ -20,7 +20,7 @@ app.post("/", function(req, res){
       url: `https://us10.api.mailchimp.com/3.0/lists/e2d89a0938/members`,
       method: "POST",
       headers: {
-          "Authorization": `Bearer 1a304008238c76c37347dbe75d15a500-us10`,
+          "Authorization": `Bearer 4227e5439454d69786210d8d59f6df0e-us10`,
           "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -54,5 +54,5 @@ app.listen(process.env.PORT || 3000, function(){
     console.log("server is started on port 3000!!");
 });
 
-// api   2143a5cfd63d6ec78e247f03c01f3e74-us10
+// api   4227e5439454d69786210d8d59f6df0e-us10
 // id e2d89a0938
