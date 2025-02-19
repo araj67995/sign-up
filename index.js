@@ -20,7 +20,7 @@ app.post("/", function(req, res){
       url: `https://us10.api.mailchimp.com/3.0/lists/e2d89a0938/members`,
       method: "POST",
       headers: {
-          "Authorization": `Bearer 2143a5cfd63d6ec78e247f03c01f3e74-us10`,
+          "Authorization": `Bearer 1a304008238c76c37347dbe75d15a500-us10`,
           "Content-Type": "application/json"
       },
       body: JSON.stringify({
@@ -37,11 +37,13 @@ app.post("/", function(req, res){
    request(option, function(error, response, body){
       if(error){
         res.sendFile(__dirname + "/failure.html")
+        console.log(error);
       } else{
        if(response.statusCode === 200){
         res.sendFile(__dirname + "/sucess.html")
        }else{
         res.sendFile(__dirname + "/failure.html")
+        console.log(response.statusCode)
        }
       }
    });
